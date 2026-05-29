@@ -13,3 +13,11 @@ class Pet:
     def get_name(self): return self.__name
     def get_animal_type(self): return self.__animal_type
     def get_age(self): return self.__age
+
+class PetDashboard:
+    def __init__(self):
+        self.main_window = tk.Tk()
+        self.main_window.title("Pet Registry")
+        self.main_window.geometry("350x400")
+        self.main_window.configure(bg="#0b0c10")
+        self.my_pet = Pet()
