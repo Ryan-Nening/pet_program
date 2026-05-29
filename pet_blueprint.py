@@ -41,3 +41,18 @@ class PetDashboard:
 
         self.result_label = tk.Label(self.main_window, text="Waiting for input...", background="#0b0c10", foreground="#c5c6c7", font=("Courier", 10))
         self.result_label.pack(pady=10)
+
+    def save_pet_data(self):
+        self.my_pet.set_name(self.entry_name.get())
+        self.my_pet.set_animal_type(self.entry_type.get())
+        self.my_pet.set_age(self.entry_age.get())
+
+        retrieved_data = f"Registered!\nName: {self.my_pet.get_name()}\nType: {self.my_pet.get_animal_type()}\nAge: {self.my_pet.get_age()}"
+        self.result_label.config(text=retrieved_data, fg="#66fcf1")
+
+    def run_application(self):
+        self.build_user_interface()
+        self.main_window.mainloop()
+
+
+    
