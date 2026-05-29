@@ -21,3 +21,18 @@ class PetDashboard:
         self.main_window.geometry("350x400")
         self.main_window.configure(bg="#0b0c10")
         self.my_pet = Pet()
+
+    def build_user_interface(self):
+        tk.Label(self.main_window, text="PET REGISTRY", background="#0b0c10", foreground="#66fcf1", font=("Helvetica", 16, "bold")).pack(pady=(20, 10))
+
+        tk.Label(self.main_window, text="Pet Name:", background="#0b0c10", foreground="white").pack()
+        self.entry_name = tk.Entry(self.main_window, justify="center", background="#1f2833", foreground="#66fcf1", insertbackground="white")
+        self.entry_name.pack(pady=5)
+
+        tk.Label(self.main_window, text="Animal Type (e.g. Dog, Cat):", background="#0b0c10", foreground="white").pack()
+        self.entry_type = tk.Entry(self.main_window, justify="center", background="#1f2833", foreground="#66fcf1", insertbackground="white")
+        self.entry_type.pack(pady=5)
+
+        tk.Label(self.main_window, text="Age:", background="#0b0c10", foreground="white").pack()
+        self.entry_age = tk.Entry(self.main_window, justify="center", background="#1f2833", foreground="#66fcf1", insertbackground="white")
+        self.entry_age.pack(pady=5)
