@@ -36,3 +36,8 @@ class PetDashboard:
         tk.Label(self.main_window, text="Age:", background="#0b0c10", foreground="white").pack()
         self.entry_age = tk.Entry(self.main_window, justify="center", background="#1f2833", foreground="#66fcf1", insertbackground="white")
         self.entry_age.pack(pady=5)
+
+        tk.Button(self.main_window, text="Save Data", background="#45a29e", foreground="white", command=self.save_pet_data).pack(pady=15)
+
+        self.result_label = tk.Label(self.main_window, text="Waiting for input...", background="#0b0c10", foreground="#c5c6c7", font=("Courier", 10))
+        self.result_label.pack(pady=10)
